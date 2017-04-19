@@ -1,0 +1,68 @@
+/* page sizing */
+.row.content {
+	height: 500px;
+}
+.sidenav {
+	background-color: #bbb;
+	min-height: 100%;
+}
+@media screen and (max-width: 767px) {
+	.row.content {
+		height: auto;
+	} 
+	.sidenav {
+		height: auto;
+		padding: 15px;
+	}
+}
+
+
+/* nav pills */
+.nav-pills > li > a {
+	border-radius: 0px;
+	color: #333;
+}
+.nav-pills > li:hover > a, .nav-pills > li.active:hover > a, .nav-pills > li > a:focus {
+	background-color: #999;
+	color: #fff;
+}
+.nav-pills > li.active > a, .nav-pills > li.active > a:focus {
+	background-color: #555;
+}
+
+
+/* collapsable panel */
+.panel-group .panel {
+	border-radius: 0px;
+	box-shadow: none;
+	border: 0px;
+}
+.panel-default > .panel-heading {
+	border-radius: 0px;
+	background-color: #555;
+	color: #fff;
+}
+.panel-title > a:active, .panel-title > a:hover, .panel-title > a:focus {
+	text-decoration: none;
+}
+.panel-body {
+	background-color: #999;
+	color: #fff;
+	border: 0px;
+}
+.panel-group .panel-heading + .panel-collapse > .panel-body {
+	border: 0px;
+}
+
+
+/* other elements */
+footer {
+	background-color: #555;
+	color: white;
+	padding: 15px;
+}
+hr {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	border-top: 2px solid #555;
+}

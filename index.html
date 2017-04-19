@@ -1,0 +1,131 @@
+﻿<!DOCTYPE html>
+<html lang="pl">
+	<head>
+		<title>jQuery + CSS3 clock</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<!-- Bootstrap and jQuery files -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<!-- My own CSS files -->
+		<link rel="stylesheet" type="text/css" href="bootstrapOverridings.css" />
+		<link rel="stylesheet" type="text/css" href="styleMain.css" />
+		<link id="colorStylesheet" rel="stylesheet" type="text/css" href="styleGreen.css" />
+		<!-- JS logic -->
+		<script src="main.js"></script> 
+	</head>
+	
+	<body>
+
+		<div class="container-fluid">
+			<div class="row content">
+			
+				<!-- left column -->
+				<div class="col-sm-3 sidenav">
+					<!-- select theme pills -->
+					<h4>Select clock theme</h4>
+					<hr>
+					<ul class="nav nav-pills nav-stacked">
+						<li id="greenButton" class="active"><a href="#">Green</a></li>
+						<li id="redButton"><a href="#">Red</a></li>
+						<li id="yellowButton"><a href="#">Yellow</a></li>
+						<li id="blueButton"><a href="#">Blue</a></li>
+					</ul>
+					<!------------------------>
+					
+					<!-- 'about the clock' collapse panel -->
+					<hr>
+					<div class="panel-group">
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<h4 class="panel-title">
+									<a data-toggle="collapse" id="siteInfoLink" href="#pageInfo">About the clock<span class="pull-right glyphicon glyphicon-menu-down"></span></a>
+								</h4>
+							</div>
+							<div id="pageInfo" class="panel-collapse collapse text-justify">
+								<div class="panel-body">This is just a small for-fun project. The clock uses few CSS classes and some jQuery to make it constantly updated. The page is built on Bootstrap framework so it could work on all modern browsers and mobile devices.</div>
+							</div>
+						</div>
+					</div>
+					<!------------------------>
+					
+				</div>
+				<!------------------------>
+
+				
+				
+				<!-- right column (clock area) -->
+				<div class="col-sm-9">
+					
+					<div id="clockDiv">
+						<!-- 1st digit -->
+						<div class="block1 d1 e4" style="top: 21%; left: 0.3%;"></div>
+						<div class="block1 d1 e6" style="bottom: 21%; left: 0.3%;"></div>
+						<div class="block2 d1 e1" style="top: 12%; left: 3.3%;"></div>
+						<div class="block2 d1 e2" style="top: 46.5%; left: 3.3%;"></div>
+						<div class="block2 d1 e3" style="bottom: 12%; left: 3.3%;"></div>
+						<div class="block1 d1 e5" style="top: 21%; left: 11.8%;"></div>
+						<div class="block1 d1 e7" style="bottom: 21%; left: 11.8%;"></div>
+						<!-- 2nd digit -->
+						<div class="block1 d2 e4" style="top: 21%; left: 16.1%;"></div>
+						<div class="block1 d2 e6" style="bottom: 21%; left: 16.1%;"></div>
+						<div class="block2 d2 e1" style="top: 12%; left: 19.1%;"></div>
+						<div class="block2 d2 e2" style="top: 46.5%; left: 19.1%;"></div>
+						<div class="block2 d2 e3" style="bottom: 12%; left: 19.1%;"></div>
+						<div class="block1 d2 e5" style="top: 21%; left: 27.6%;"></div>
+						<div class="block1 d2 e7" style="bottom: 21%; left: 27.6%;"></div>
+						<!-- dots -->
+						<div class="dot" style="top: 35%; left: 31.4%;"></div>
+						<div class="dot" style="bottom: 35%; left: 31.4%;"></div>
+						<!-- 3rd digit -->
+						<div class="block1 d3 e4" style="top: 21%; left: 35.2%;"></div>
+						<div class="block1 d3 e6" style="bottom: 21%; left: 35.2%;"></div>
+						<div class="block2 d3 e1" style="top: 12%; left: 38.2%;"></div>
+						<div class="block2 d3 e2" style="top: 46.5%; left: 38.2%;"></div>
+						<div class="block2 d3 e3" style="bottom: 12%; left: 38.2%;"></div>
+						<div class="block1 d3 e5" style="top: 21%; left: 46.7%;"></div>
+						<div class="block1 d3 e7" style="bottom: 21%; left: 46.7%;"></div>
+						<!-- 4th digit -->
+						<div class="block1 d4 e5" style="top: 21%; right: 35.2%;"></div>
+						<div class="block1 d4 e7" style="bottom: 21%; right: 35.2%;"></div>
+						<div class="block2 d4 e1" style="top: 12%; right: 38.2%;"></div>
+						<div class="block2 d4 e2" style="top: 46.5%; right: 38.2%;"></div>
+						<div class="block2 d4 e3" style="bottom: 12%; right: 38.2%;"></div>
+						<div class="block1 d4 e4" style="top: 21%; right: 46.7%;"></div>
+						<div class="block1 d4 e6" style="bottom: 21%; right: 46.7%;"></div>
+						<!-- dots -->
+						<div class="dot" style="top: 35%; right: 31.4%;"></div>
+						<div class="dot" style="bottom: 35%; right: 31.4%;"></div>
+						<!-- 5th digit -->
+						<div class="block1 d5 e5" style="top: 21%; right: 16.1%;"></div>
+						<div class="block1 d5 e7" style="bottom: 21%; right: 16.1%;"></div>
+						<div class="block2 d5 e1" style="top: 12%; right: 19.1%;"></div>
+						<div class="block2 d5 e2" style="top: 46.5%; right: 19.1%;"></div>
+						<div class="block2 d5 e3" style="bottom: 12%; right: 19.1%;"></div>
+						<div class="block1 d5 e4" style="top: 21%; right: 27.6%;"></div>
+						<div class="block1 d5 e6" style="bottom: 21%; right: 27.6%;"></div>
+						<!-- 6th digit -->
+						<div class="block1 d6 e5" style="top: 21%; right: 0.3%;"></div>
+						<div class="block1 d6 e7" style="bottom: 21%; right: 0.3%;"></div>
+						<div class="block2 d6 e1" style="top: 12%; right: 3.3%;"></div>
+						<div class="block2 d6 e2" style="top: 46.5%; right: 3.3%;"></div>
+						<div class="block2 d6 e3" style="bottom: 12%; right: 3.3%;"></div>
+						<div class="block1 d6 e4" style="top: 21%; right: 11.8%;"></div>
+						<div class="block1 d6 e6" style="bottom: 21%; right: 11.8%;"></div>				
+					</div>
+
+				</div>
+				<!------------------------>
+				
+			</div>
+		</div>
+
+		<!-- footer -->
+		<footer class="container-fluid">
+			<p class="text-center">Made by Michał Wiśniewski (MW Projects)</p>
+		</footer>
+
+	</body>
+</html>

@@ -1,0 +1,95 @@
+﻿/* clock div with always the same aspect ratio */
+#clockDiv {
+	position: relative;
+	width: 100%;
+	background: black;
+	margin-top: 15px;
+	margin-bottom: 15px;
+	border: 1vw solid black;
+	border-radius: 2vw 2vw 2vw 2vw;
+}
+#clockDiv:before {
+	content: '';
+	display: block;
+	padding-top: 33.333%; /* clock aspect ratio */
+}
+
+
+/* vertical clock element */
+.block1 {
+	width: 2.3331%;
+	height: 23.3331%;
+	position: absolute;
+	transition: background-color 0.2s, box-shadow 0.2s;
+}
+.block1:before {
+	content: '';
+	position: absolute;
+  left: 14.64466094067263%;
+	top: -10.61721893673495%;
+  width: 70.71067811865475%;
+  height: 21.23443787346989%;
+	transform: rotate(45deg);
+	transition: background-color 0.2s, box-shadow 0.2s;
+}
+.block1:after {
+	content: '';
+	position: absolute;
+  left: 14.64466094067263%;
+	bottom: -10.61721893673495%;
+  width: 70.71067811865475%;
+  height: 21.23443787346989%;
+	transform: rotate(45deg);
+	transition: background-color 0.2s, box-shadow 0.2s;
+}
+
+
+/* horizontal clock element */
+.block2 {
+	width: 7.76223%;
+	height: 7%;
+	position: absolute;
+	transition: background-color 0.2s, box-shadow 0.2s;
+}
+.block2:before {
+	content: '';
+	position: absolute;
+  top: 14.64466094067263%;
+	left: -10.61721893673495%;
+  width: 21.23443787346989%;
+  height: 70.71067811865475%;
+	transform: rotate(45deg);
+	transition: background-color 0.2s, box-shadow 0.2s;
+}
+.block2:after {
+	content: '';
+	position: absolute;
+  top: 14.64466094067263%;
+	right: -10.61721893673495%;
+  width: 21.23443787346989%;
+  height: 70.71067811865475%;
+	transform: rotate(45deg);
+	transition: background-color 0.2s, box-shadow 0.2s;
+}
+
+
+/* dot between the digits */
+.dot {
+	width: 2.3331%;
+	height: 7%;
+	position: absolute;
+	border-radius: 50%;
+	transition: background-color 0.2s, box-shadow 0.2s;
+}
+
+
+/* inactive clock segments */
+.inactive {
+	transition: background-color 0.5s, box-shadow 0.3s;
+}
+.inactive:before {
+	transition: background-color 0.5s, box-shadow 0.3s;
+}
+.inactive:after {
+	transition: background-color 0.5s, box-shadow 0.3s;
+}

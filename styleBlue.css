@@ -1,0 +1,50 @@
+﻿/* vertical clock element */
+.block1 {
+	background-color: blue;
+	box-shadow: 0px 0px 7px blue;
+}
+.block1:before {
+	background-color: blue;
+	box-shadow: 0px 0px 7px blue;
+}
+.block1:after {
+	background-color: blue;
+	box-shadow: 0px 0px 7px blue;
+}
+
+
+/* horizontal clock element */
+.block2 {
+	background-color: blue;
+	box-shadow: 0px 0px 7px blue;
+}
+.block2:before {
+	background-color: blue;
+	box-shadow: 0px 0px 7px blue;
+}
+.block2:after {
+	background-color: blue;
+	box-shadow: 0px 0px 7px blue;
+}
+
+
+/* dot between the digits */
+.dot {
+	background-color: blue;
+	box-shadow: 0px 0px 7px blue;
+}
+
+
+/* inactive clock segments */
+.inactive {
+	background-color: #000010;
+	box-shadow: 0px 0px 3px #000010;
+}
+.inactive:before {
+	background-color: #000010;
+	box-shadow: 0px 0px 3px #000010;
+}
+.inactive:after {
+	background-color: #000010;
+	box-shadow: 0px 0px 3px #000010;
+}
